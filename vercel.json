@@ -13,6 +13,14 @@
     ],
     "routes": [
         {
+            "src": "/(css|js|images|fonts|scss)/(.*)",
+            "dest": "/$1/$2"
+        },
+        {
+            "src": "/project-crud/assets/(.*)",
+            "dest": "/api/project-crud/assets/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
