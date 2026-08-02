@@ -27,10 +27,10 @@ if (isset($_POST['save'])) {
 
   if ($image['error'] == 0) {
     $filename = uniqid() . "_" . basename($image['name']);
-    $filepath = "assets/img/" . $filename;
+    $filepath = "../../public/img/" . $filename;
 
     if ($id && !empty($row['image'])) {
-      $old_picture_path = "assets/img/" . $row['image'];
+      $old_picture_path = "../../public/img/" . $row['image'];
       if (file_exists($old_picture_path)) {
         unlink($old_picture_path);
       }

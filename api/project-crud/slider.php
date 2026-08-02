@@ -20,7 +20,7 @@ if (isset($_GET['delete'])) {
 
   $img = mysqli_query($conn, "SELECT image FROM sliders WHERE id='$delete'");
   $rowImg = mysqli_fetch_assoc($img);
-  $old_picture_path = "assets/img/" . $rowImg['image'];
+  $old_picture_path = "../../public/img/" . $rowImg['image'];
   if (file_exists($old_picture_path)) {
     unlink($old_picture_path);
   }
@@ -118,7 +118,7 @@ if (isset($_GET['delete'])) {
                           <td><?php echo $index += 1 ?></td>
                           <td><?php echo $row['title'] ?></td>
                           <td>
-                            <img src="assets/img/<?php echo $row['image'] ?>" width="170" alt="">
+                            <img src="../../public/img/<?php echo $row['image'] ?>" width="170" alt="">
                           </td>
                           <td><?php echo $row['subtitle'] ?></td>
                           <td><?php echo $row['description'] ?></td>
