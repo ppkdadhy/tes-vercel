@@ -24,7 +24,7 @@ if (session_status() === PHP_SESSION_NONE) {
         'samesite' => 'Lax'
     ]);
     
-    session_start();
+    // session_start();
 }
 
 $servername = getenv('DB_HOST') ?: "localhost";
