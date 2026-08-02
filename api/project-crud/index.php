@@ -16,7 +16,7 @@ if (isset($_POST['login'])) { //jika tombol login di tekan
   if ($email == $row['email'] && $pass == $row['password']) {
     $_SESSION['NAME'] = $row['name'];
     // KALAU BERHASIL MASUK KE DASHBOARD
-    header("location:slider.php");
+    header("location:dashboard.php");
   } else {
     // KALAU GAGAL TETAP DI LOGIN
     header("location:index.php");
