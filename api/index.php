@@ -1,29 +1,53 @@
 <?php
-include "project-crud/config/koneksi.php";
-
-// Ambil path URL yang diminta pengunjung
+// 1. Ambil path URL yang diminta pengunjung/browser
 $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// Jika URL meminta file di project-crud (misal: /project-crud/dashboard.php)
+// 2. TANGANI FILE STATIS (CSS, JS, Images, Fonts)
+// Jika browser meminta file statis, layani filenya langsung sesuai Content-Type
+$public_file = __DIR__ . '/../public' . $request_uri;
+if (file_exists($public_file) && is_file($public_file)) {
+    $ext = pathinfo($public_file, PATHINFO_EXTENSION);
+    $mimes = [
+        'css'   => 'text/css',
+        'js'    => 'application/javascript',
+        'jpg'   => 'image/jpeg',
+        'jpeg'  => 'image/jpeg',
+        'png'   => 'image/png',
+        'gif'   => 'image/gif',
+        'svg'   => 'image/svg+xml',
+        'woff'  => 'font/woff',
+        'woff2' => 'font/woff2',
+        'ttf'   => 'font/ttf'
+    ];
+    if (isset($mimes[$ext])) {
+        header("Content-Type: " . $mimes[$ext]);
+    }
+    readfile($public_file);
+    exit;
+}
+
+// 3. TANGANI ROUTING ROUTE PHP
+// Jika URL meminta file di project-crud
 if (strpos($request_uri, '/project-crud/') === 0) {
-	$file = __DIR__ . $request_uri;
-	if (file_exists($file) && is_file($file)) {
-		require $file;
-		exit;
-	}
+    $file = __DIR__ . $request_uri;
+    if (file_exists($file) && is_file($file)) {
+        require $file;
+        exit;
+    }
 }
 
 // Jika URL meminta single.php
 if ($request_uri === '/single.php' || $request_uri === '/single') {
-	require __DIR__ . '/single.php';
-	exit;
+    require __DIR__ . '/single.php';
+    exit;
 }
 
-// Jika tidak ada routing khusus, lanjutkan eksekusi index.php bawaan di bawah ini
+// 4. INCLUDE KONEKSI DATABASE
+require_once __DIR__ . '/project-crud/config/koneksi.php';
 
 $slider = mysqli_query($conn, "SELECT * FROM sliders WHERE is_active=1 ORDER BY id DESC limit 3");
 $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
-// var_dump($r_sliders);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
