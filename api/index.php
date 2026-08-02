@@ -42,6 +42,26 @@ if ($request_uri === '/single.php' || $request_uri === '/single') {
     exit;
 }
 
+// Tambahkan di dalam blok penanganan file statis/routing di api/index.php
+if (strpos($request_uri, '/project-crud/assets/') === 0) {
+    $file = __DIR__ . $request_uri;
+    if (file_exists($file) && is_file($file)) {
+        $ext = pathinfo($file, PATHINFO_EXTENSION);
+        $mimes = [
+            'jpg'  => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'png'  => 'image/png',
+            'gif'  => 'image/gif',
+            'svg'  => 'image/svg+xml'
+        ];
+        if (isset($mimes[$ext])) {
+            header("Content-Type: " . $mimes[$ext]);
+        }
+        readfile($file);
+        exit;
+    }
+}
+
 // 4. INCLUDE KONEKSI DATABASE
 require_once __DIR__ . '/project-crud/config/koneksi.php';
 
