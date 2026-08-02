@@ -1,4 +1,24 @@
 <?php
+// Ambil path URL yang diminta pengunjung
+$request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// Jika URL meminta file di project-crud (misal: /project-crud/dashboard.php)
+if (strpos($request_uri, '/project-crud/') === 0) {
+	$file = __DIR__ . $request_uri;
+	if (file_exists($file) && is_file($file)) {
+		require $file;
+		exit;
+	}
+}
+
+// Jika URL meminta single.php
+if ($request_uri === '/single.php' || $request_uri === '/single') {
+	require __DIR__ . '/single.php';
+	exit;
+}
+
+// Jika tidak ada routing khusus, lanjutkan eksekusi index.php bawaan di bawah ini
+
 include "project-crud/config/koneksi.php";
 $slider = mysqli_query($conn, "SELECT * FROM sliders WHERE is_active=1 ORDER BY id DESC limit 3");
 $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
@@ -58,7 +78,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 	<section id="home-section" class="hero">
 		<div class="home-slider  owl-carousel">
 			<?php
-			
+
 			foreach ($r_sliders as $index => $slider) {
 				$title = explode(" ", ucwords($slider['title']));
 				$desc = explode(" ", ucwords($slider['description']));
@@ -67,7 +87,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				if (count($desc) > $maxKata) {
 					$potong = array_slice($desc, 0, $maxKata);
 					$hasil = implode(" ", $potong) . " ...";
-				}else{
+				} else {
 					$hasil = implode(" ", $desc);
 				}
 			?>
