@@ -1,12 +1,12 @@
 <?php
-session_start();
+// session_start();
 session_regenerate_id();
 include 'config/koneksi.php';
 
-if (!isset($_SESSION['NAME'])) {
-  header("location:index.php");
-  exit();
-}
+// if (!isset($_SESSION['NAME'])) {
+//   header("location:index.php");
+//   exit();
+// }
 
 
 ?>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['NAME'])) {
             <div class="col-sm-6 col-md-12">
               <?php
 
-              echo $_SESSION['NAME'];
+              // echo $_SESSION['NAME'];
               ?>
             </div>
           </div>

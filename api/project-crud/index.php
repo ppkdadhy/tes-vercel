@@ -1,6 +1,6 @@
 <?php
 include "config/koneksi.php";
-session_start();
+// session_start();
 
 
 if (isset($_POST['login'])) { //jika tombol login di tekan
@@ -14,7 +14,7 @@ if (isset($_POST['login'])) { //jika tombol login di tekan
   // [name=>'budi']
   // var_dump($row);
   if ($email == $row['email'] && $pass == $row['password']) {
-    $_SESSION['NAME'] = $row['name'];
+    // $_SESSION['NAME'] = $row['name'];
     // KALAU BERHASIL MASUK KE DASHBOARD
     header("location:dashboard.php");
   } else {
