@@ -1,12 +1,12 @@
 <?php
-session_start();
-session_regenerate_id();
+// session_start();
+// session_regenerate_id();
 include 'config/koneksi.php';
 
-if (!isset($_SESSION['NAME'])) {
-  header("location:index.php");
-  exit();
-}
+// if (!isset($_SESSION['NAME'])) {
+//   header("location:index.php");
+//   exit();
+// }
 
 $id = isset($_GET['edit']) ? $_GET['edit'] : '';
 $query = mysqli_query($conn, "SELECT * FROM resume WHERE id='$id'");
