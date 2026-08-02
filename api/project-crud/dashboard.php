@@ -1,10 +1,10 @@
 <?php
 session_start();
 session_regenerate_id();
-// if (!isset($_SESSION['NAME'])) {
-//   header("location:index.php");
-//   exit();
-// }
+if (!isset($_SESSION['NAME'])) {
+  header("location:index.php");
+  exit();
+}
 
 
 ?>
