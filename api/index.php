@@ -48,11 +48,16 @@ if (strpos($request_uri, '/project-crud/assets/') === 0) {
     if (file_exists($file) && is_file($file)) {
         $ext = pathinfo($file, PATHINFO_EXTENSION);
         $mimes = [
-            'jpg'  => 'image/jpeg',
-            'jpeg' => 'image/jpeg',
-            'png'  => 'image/png',
-            'gif'  => 'image/gif',
-            'svg'  => 'image/svg+xml'
+            'css'   => 'text/css',
+            'js'    => 'application/javascript',
+            'jpg'   => 'image/jpeg',
+            'jpeg'  => 'image/jpeg',
+            'png'   => 'image/png',
+            'gif'   => 'image/gif',
+            'svg'   => 'image/svg+xml',
+            'woff'  => 'font/woff',
+            'woff2' => 'font/woff2',
+            'ttf'   => 'font/ttf'
         ];
         if (isset($mimes[$ext])) {
             header("Content-Type: " . $mimes[$ext]);

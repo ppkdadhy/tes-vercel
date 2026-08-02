@@ -13,6 +13,23 @@
 // }
 // echo "Connected successfully";
 
+// Atur keamanan session cookie sebelum session_start
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_only_cookies', 1);
+    ini_set('session.use_strict_mode', 1);
+    
+    session_set_cookie_params([
+        'lifetime' => 86400, // 1 hari
+        'path' => '/',
+        'secure' => true,    // Wajib true di Vercel (HTTPS)
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+    
+    session_start();
+}
+
+
 $servername = getenv('DB_HOST') ?: "localhost";
 $username   = getenv('DB_USER') ?: "root";
 $password   = getenv('DB_PASS') ?: "";
