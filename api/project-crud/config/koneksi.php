@@ -13,6 +13,20 @@
 // }
 // echo "Connected successfully";
 
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_only_cookies', 1);
+    
+    session_set_cookie_params([
+        'lifetime' => 86400,
+        'path'     => '/', // Wajib '/' agar session berlaku untuk seluruh URL /project-crud/
+        'secure'   => true,
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+    
+    session_start();
+}
+
 $servername = getenv('DB_HOST') ?: "localhost";
 $username   = getenv('DB_USER') ?: "root";
 $password   = getenv('DB_PASS') ?: "";
