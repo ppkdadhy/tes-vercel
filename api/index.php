@@ -35,20 +35,20 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="/css/animate.css">
 
-	<link rel="stylesheet" href="../css/owl.carousel.min.css">
-	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<link rel="stylesheet" href="/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/css/magnific-popup.css">
 
-	<link rel="stylesheet" href="../css/aos.css">
+	<link rel="stylesheet" href="/css/aos.css">
 
-	<link rel="stylesheet" href="../css/ionicons.min.css">
+	<link rel="stylesheet" href="/css/ionicons.min.css">
 
-	<link rel="stylesheet" href="../css/flaticon.css">
-	<link rel="stylesheet" href="../css/icomoon.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="/css/flaticon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -140,7 +140,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				<div class="col-md-6 col-lg-5 d-flex">
 					<div class="img-about img d-flex align-items-stretch">
 						<div class="overlay"></div>
-						<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(../images/bg_1.png);">
+						<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(/images/bg_1.png);">
 						</div>
 					</div>
 				</div>
@@ -402,7 +402,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-4.jpg);">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-4.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -411,7 +411,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 					</div>
 				</div>
 				<div class="col-md-8">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-5.jpg);">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-5.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -421,7 +421,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				</div>
 
 				<div class="col-md-8">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-1.jpg);">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-1.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -429,7 +429,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 						</div>
 					</div>
 
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-6.jpg);">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-6.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -440,7 +440,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-2.jpg);">
+							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-2.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center p-4">
 									<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -449,7 +449,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 							</div>
 						</div>
 						<div class="col-md-12">
-							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../images/project-3.jpg);">
+							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(/images/project-3.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center p-4">
 									<h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -476,7 +476,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('../images/image_1.jpg');">
+						<a href="single.html" class="block-20" style="background-image: url('/images/image_1.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 							<div class="d-flex align-items-center mb-3 meta">
@@ -493,7 +493,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('../images/image_2.jpg');">
+						<a href="single.html" class="block-20" style="background-image: url('/images/image_2.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 							<div class="d-flex align-items-center mb-3 meta">
@@ -510,7 +510,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="single.html" class="block-20" style="background-image: url('../images/image_3.jpg');">
+						<a href="single.html" class="block-20" style="background-image: url('/images/image_3.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 							<div class="d-flex align-items-center mb-3 meta">
@@ -568,7 +568,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(../images/bg_1.jpg)">
+	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(/images/bg_1.jpg)">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
@@ -652,7 +652,7 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 				</div>
 
 				<div class="col-md-6 d-flex">
-					<div class="img" style="background-image: url(../images/about.jpg);"></div>
+					<div class="img" style="background-image: url(/images/about.jpg);"></div>
 				</div>
 			</div>
 		</div>
@@ -732,20 +732,20 @@ $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 		</svg></div>
 
 
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="../js/popper.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/jquery.easing.1.3.js"></script>
-	<script src="../js/jquery.waypoints.min.js"></script>
-	<script src="../js/jquery.stellar.min.js"></script>
-	<script src="../js/owl.carousel.min.js"></script>
-	<script src="../js/jquery.magnific-popup.min.js"></script>
-	<script src="../js/aos.js"></script>
-	<script src="../js/jquery.animateNumber.min.js"></script>
-	<script src="../js/scrollax.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.stellar.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/aos.js"></script>
+	<script src="/js/jquery.animateNumber.min.js"></script>
+	<script src="/js/scrollax.min.js"></script>
 
-	<script src="../js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 </body>
 
