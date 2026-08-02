@@ -3,10 +3,9 @@ session_start();
 session_regenerate_id();
 include 'config/koneksi.php';
 
-// Pastikan session_start() sudah dipanggil via koneksi.php
-if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
-    header("Location: index.php");
-    exit;
+if (!isset($_SESSION['NAME'])) {
+  header("location:index.php");
+  exit();
 }
 
 
