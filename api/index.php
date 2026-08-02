@@ -1,4 +1,6 @@
 <?php
+include "project-crud/config/koneksi.php";
+
 // Ambil path URL yang diminta pengunjung
 $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -19,7 +21,6 @@ if ($request_uri === '/single.php' || $request_uri === '/single') {
 
 // Jika tidak ada routing khusus, lanjutkan eksekusi index.php bawaan di bawah ini
 
-include "project-crud/config/koneksi.php";
 $slider = mysqli_query($conn, "SELECT * FROM sliders WHERE is_active=1 ORDER BY id DESC limit 3");
 $r_sliders = mysqli_fetch_all($slider, MYSQLI_ASSOC);
 // var_dump($r_sliders);
